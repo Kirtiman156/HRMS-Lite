@@ -195,5 +195,3 @@ Frontend will be running at: http://localhost:5173
 Built for Ethara AI Technical Assessment
 
 ---
-
-Made with ❤️ using React + FastAPI + MySQL
