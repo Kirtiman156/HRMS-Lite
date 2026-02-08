@@ -9,9 +9,9 @@ A lightweight Human Resource Management System for managing employees and tracki
 
 ## 🌐 Live Demo
 
-- **Frontend**: [Your Vercel URL]
-- **Backend API**: [Your Render URL]
-- **API Docs**: [Your Render URL]/docs
+- **Frontend**: https://kirtiman156.github.io/HRMS-Lite
+- **Backend API**: https://hrms-lite-api-08mz.onrender.com
+- **API Docs**: https://hrms-lite-api-08mz.onrender.com/docs
 
 ## 📋 Features
 
