@@ -1,36 +1,36 @@
-# HRMS Lite
+# StaffSync
 
-A lightweight Human Resource Management System for managing employees and tracking attendance.
+A modern Employee Management and Attendance Tracking System.
 
-![HRMS Lite](https://img.shields.io/badge/HRMS-Lite-667eea)
+![StaffSync](https://img.shields.io/badge/StaffSync-1.0-00B4DB)
 ![Python](https://img.shields.io/badge/Python-3.9+-blue)
 ![React](https://img.shields.io/badge/React-18+-61dafb)
-![MySQL](https://img.shields.io/badge/MySQL-8.0+-orange)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-336791)
 
 ## 🌐 Live Demo
 
-- **Frontend**: https://kirtiman156.github.io/HRMS-Lite
+- **Frontend**: https://97rohit.github.io/staffsync
 - **Backend API**: https://hrms-lite-api-08mz.onrender.com
 - **API Docs**: https://hrms-lite-api-08mz.onrender.com/docs
 
 ## 📋 Features
 
 ### Core Features
-- ✅ **Employee Management**
-  - Add new employees (ID, Name, Email, Department)
+- ✅ **Team Management**
+  - Add new team members (ID, Name, Email, Department)
   - View all employees in a card grid
-  - Delete employees with confirmation
+  - Remove team members with confirmation
 
-- ✅ **Attendance Tracking**
-  - Mark daily attendance (Present/Absent)
-  - View attendance history
-  - Filter by date range (Bonus)
+- ✅ **Check-in Tracking**
+  - Mark daily check-ins (Present/Absent)
+  - View check-in history
+  - Filter by date range
 
-- ✅ **Dashboard**
-  - Employee count overview
-  - Today's attendance summary
+- ✅ **Overview Dashboard**
+  - Team size overview
+  - Today's check-in summary
   - Department breakdown
-  - Recent attendance activity
+  - Recent activity feed
 
 ### Technical Features
 - RESTful API with proper status codes
@@ -45,14 +45,14 @@ A lightweight Human Resource Management System for managing employees and tracki
 |-------|------------|
 | Frontend | React 18 + Vite |
 | Backend | FastAPI (Python) |
-| Database | MySQL |
+| Database | PostgreSQL |
 | ORM | SQLAlchemy |
 | Styling | Vanilla CSS |
 
 ## 📁 Project Structure
 
 ```
-HRMS-Lite/
+staffsync/
 ├── backend/
 │   ├── routes/
 │   │   ├── employees.py
@@ -82,20 +82,15 @@ HRMS-Lite/
 ### Prerequisites
 - Python 3.9+
 - Node.js 18+
-- MySQL 8.0+
+- PostgreSQL (or SQLite for local testing)
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/hrms-lite.git
-cd hrms-lite
+git clone https://github.com/97Rohit/staffsync.git
+cd staffsync
 ```
 
-### 2. Setup MySQL Database
-```sql
-CREATE DATABASE hrms_lite;
-```
-
-### 3. Backend Setup
+### 2. Backend Setup
 ```bash
 cd backend
 
@@ -111,10 +106,6 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Configure environment
-# Edit .env file with your MySQL credentials
-# DATABASE_URL=mysql+pymysql://username:password@localhost:3306/hrms_lite
-
 # Run the server
 uvicorn main:app --reload
 ```
@@ -122,16 +113,12 @@ Backend will be running at: http://localhost:8000
 
 API Docs available at: http://localhost:8000/docs
 
-### 4. Frontend Setup
+### 3. Frontend Setup
 ```bash
 cd frontend
 
 # Install dependencies
 npm install
-
-# Configure environment
-# Edit .env file if backend is on different port
-# VITE_API_URL=http://localhost:8000
 
 # Run development server
 npm run dev
@@ -140,58 +127,32 @@ Frontend will be running at: http://localhost:5173
 
 ## 📡 API Endpoints
 
-### Employees
+### Team
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /api/employees | Get all employees |
-| GET | /api/employees/{id} | Get single employee |
-| POST | /api/employees | Create new employee |
-| DELETE | /api/employees/{id} | Delete employee |
+| GET | /api/employees | Get all team members |
+| GET | /api/employees/{id} | Get single team member |
+| POST | /api/employees | Create new team member |
+| DELETE | /api/employees/{id} | Remove team member |
 
-### Attendance
+### Check-ins
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /api/attendance | Get all attendance (supports date filters) |
-| GET | /api/attendance/employee/{id} | Get employee's attendance |
-| POST | /api/attendance | Mark attendance |
+| GET | /api/attendance | Get all check-ins (supports date filters) |
+| GET | /api/attendance/employee/{id} | Get member's check-ins |
+| POST | /api/attendance | Mark check-in |
 
-### Dashboard
+### Overview
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /api/dashboard/stats | Get dashboard statistics |
+| GET | /api/dashboard/stats | Get overview statistics |
 
-## 🚢 Deployment
+## ⚠️ Notes
 
-### Backend (Render)
-1. Create new Web Service on Render
-2. Connect GitHub repository
-3. Set build command: `pip install -r requirements.txt`
-4. Set start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-5. Add environment variable: `DATABASE_URL` (MySQL connection string)
-
-### Frontend (Vercel)
-1. Import project from GitHub
-2. Set framework preset to Vite
-3. Add environment variable: `VITE_API_URL` (Render backend URL)
-4. Deploy
-
-## ⚠️ Assumptions & Limitations
-
-1. **Single Admin User**: No authentication implemented (as per requirements)
-2. **No Leave/Payroll**: Focus on employee and attendance management only
-3. **MySQL Required**: Application requires MySQL database
-4. **Date Format**: Attendance dates are in YYYY-MM-DD format
-
-## 📝 Future Enhancements
-
-- [ ] Employee profile editing
-- [ ] Bulk attendance marking
-- [ ] Export attendance reports (CSV/PDF)
-- [ ] Employee search and filters
-- [ ] Authentication system
+1. **Single User Mode**: No authentication (as per requirements)
+2. **Focus**: Employee and attendance management only
+3. **Date Format**: Check-in dates are in YYYY-MM-DD format
 
 ## 👤 Author
 
 Built for Ethara AI Technical Assessment
-
----

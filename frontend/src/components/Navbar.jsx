@@ -4,27 +4,27 @@ function Navbar() {
     return (
         <nav className="sidebar">
             <div className="sidebar-logo">
-                <div className="logo-icon">👥</div>
-                <h1>HRMS Lite</h1>
+                <div className="logo-icon">🔄</div>
+                <h1>StaffSync</h1>
             </div>
 
             <ul className="nav-menu">
                 <li>
                     <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-                        <span className="icon">📊</span>
-                        Dashboard
+                        <span className="icon">🏠</span>
+                        Overview
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to="/employees" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-                        <span className="icon">👤</span>
-                        Employees
+                        <span className="icon">👥</span>
+                        Team
                     </NavLink>
                 </li>
                 <li>
                     <NavLink to="/attendance" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-                        <span className="icon">📅</span>
-                        Attendance
+                        <span className="icon">✓</span>
+                        Check-ins
                     </NavLink>
                 </li>
             </ul>
