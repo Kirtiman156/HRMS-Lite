@@ -1,36 +1,36 @@
-# StaffSync
+# HRMS Lite
 
-A modern Employee Management and Attendance Tracking System.
+A lightweight Human Resource Management System for managing employees and tracking attendance.
 
-![StaffSync](https://img.shields.io/badge/StaffSync-1.0-00B4DB)
+![HRMS Lite](https://img.shields.io/badge/HRMS-Lite-667eea)
 ![Python](https://img.shields.io/badge/Python-3.9+-blue)
 ![React](https://img.shields.io/badge/React-18+-61dafb)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-336791)
 
 ## 🌐 Live Demo
 
-- **Frontend**: https://97rohit.github.io/staffsync
+- **Frontend**: https://kirtiman156.github.io/HRMS-Lite
 - **Backend API**: https://hrms-lite-api-08mz.onrender.com
 - **API Docs**: https://hrms-lite-api-08mz.onrender.com/docs
 
 ## 📋 Features
 
 ### Core Features
-- ✅ **Team Management**
-  - Add new team members (ID, Name, Email, Department)
+- ✅ **Employee Management**
+  - Add new employees (ID, Name, Email, Department)
   - View all employees in a card grid
-  - Remove team members with confirmation
+  - Delete employees with confirmation
 
-- ✅ **Check-in Tracking**
-  - Mark daily check-ins (Present/Absent)
-  - View check-in history
-  - Filter by date range
+- ✅ **Attendance Tracking**
+  - Mark daily attendance (Present/Absent)
+  - View attendance history
+  - Filter by date range (Bonus)
 
-- ✅ **Overview Dashboard**
-  - Team size overview
-  - Today's check-in summary
+- ✅ **Dashboard**
+  - Employee count overview
+  - Today's attendance summary
   - Department breakdown
-  - Recent activity feed
+  - Recent attendance activity
 
 ### Technical Features
 - RESTful API with proper status codes
@@ -52,7 +52,7 @@ A modern Employee Management and Attendance Tracking System.
 ## 📁 Project Structure
 
 ```
-staffsync/
+HRMS-Lite/
 ├── backend/
 │   ├── routes/
 │   │   ├── employees.py
@@ -86,8 +86,8 @@ staffsync/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/97Rohit/staffsync.git
-cd staffsync
+git clone https://github.com/Kirtiman156/HRMS-Lite.git
+cd HRMS-Lite
 ```
 
 ### 2. Backend Setup
@@ -127,31 +127,31 @@ Frontend will be running at: http://localhost:5173
 
 ## 📡 API Endpoints
 
-### Team
+### Employees
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /api/employees | Get all team members |
-| GET | /api/employees/{id} | Get single team member |
-| POST | /api/employees | Create new team member |
-| DELETE | /api/employees/{id} | Remove team member |
+| GET | /api/employees | Get all employees |
+| GET | /api/employees/{id} | Get single employee |
+| POST | /api/employees | Create new employee |
+| DELETE | /api/employees/{id} | Delete employee |
 
-### Check-ins
+### Attendance
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /api/attendance | Get all check-ins (supports date filters) |
-| GET | /api/attendance/employee/{id} | Get member's check-ins |
-| POST | /api/attendance | Mark check-in |
+| GET | /api/attendance | Get all attendance (supports date filters) |
+| GET | /api/attendance/employee/{id} | Get employee's attendance |
+| POST | /api/attendance | Mark attendance |
 
-### Overview
+### Dashboard
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /api/dashboard/stats | Get overview statistics |
+| GET | /api/dashboard/stats | Get dashboard statistics |
 
 ## ⚠️ Notes
 
 1. **Single User Mode**: No authentication (as per requirements)
 2. **Focus**: Employee and attendance management only
-3. **Date Format**: Check-in dates are in YYYY-MM-DD format
+3. **Date Format**: Attendance dates are in YYYY-MM-DD format
 
 ## 👤 Author
 
